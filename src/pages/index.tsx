@@ -5,6 +5,7 @@ import Prismic from '@prismicio/client';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import Head from 'next/head';
 import Header from '../components/Header';
 
 import { getPrismicClient } from '../services/prismic';
@@ -77,6 +78,10 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
 
   return (
     <>
+      <Head>
+        <title>Home / spacetraveling</title>
+      </Head>
+
       <main className={commonStyles.container}>
         <Header />
 
